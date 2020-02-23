@@ -24,7 +24,7 @@ class Spot:
         self.previous = None
         self.wall = False
 
-        if random.uniform(0, 1) <= 0.4:
+        if random.uniform(0, 1) <= 0.5:
             self.wall =  True
 
     def addNeighbors(self, grid):
@@ -55,8 +55,8 @@ class Spot:
         pygame.draw.rect(window, color, (self.x * W, self.y * H, W - 1, H - 1))
 
 
-COLS = 90
-ROWS = 90
+COLS = 75
+ROWS = 75
 
 WIDTH = 600
 HEIGHT = 600
@@ -139,7 +139,7 @@ def draw(grid, openSet, closedSet, end, path):
 
     else:
         print("END")
-        current = end
+        main()
         #pygame.quit()
 
 
